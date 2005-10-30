@@ -1,0 +1,13 @@
+Revision history for Perl extension Algorithm::MedianSelect::XS.
+
+0.12 Sun Oct 30 20:18:12 CET 2005
+ - Converted Algorithm::MedianSelect entirely over to XS.
+
+0.08 2005/02/15
+ - Added missing export section in documentation.
+
+0.07 2004/02/29
+ - median() takes an array instead of an arrayref.
+
+0.01 2004/01/22
+ - Initial version.
