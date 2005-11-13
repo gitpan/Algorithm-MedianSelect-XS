@@ -1,32 +1,34 @@
 package Algorithm::MedianSelect::XS;
 
-use 5.008007;
 use strict;
 use warnings;
 use base qw(Exporter);
+use vars qw($VERSION @ISA @EXPORT_OK);
 
-our (@EXPORT_OK, $VERSION);
-
-$VERSION = '0.12';
+$VERSION = '0.13';
 @EXPORT_OK = qw(median);
 
-require XSLoader;
-XSLoader::load('Algorithm::MedianSelect::XS', $VERSION);
+eval {
+  require XSLoader;
+  XSLoader::load(__PACKAGE__, $VERSION);
+} or do {
+  require DynaLoader;
+  push @ISA, 'DynaLoader';
+  bootstrap Algorithm::MedianSelect::XS $VERSION;
+};
 
 1;
 __END__
 
 =head1 NAME
 
-Algorithm::MedianSelect - Median finding algorithm
+Algorithm::MedianSelect::XS - Median finding algorithm
 
 =head1 SYNOPSIS
 
- use Algorithm::MedianSelect qw(median);
+ use Algorithm::MedianSelect::XS qw(median);
 
- @nums = qw(1 2 3 5 6 7 9 12 14 19 21);
-
- print median(@nums);
+ print median(1,2,3,5,6,7,9,12,14,19,21);
 
 =head1 DESCRIPTION
 

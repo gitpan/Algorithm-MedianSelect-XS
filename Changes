@@ -1,5 +1,8 @@
 Revision history for Perl extension Algorithm::MedianSelect::XS.
 
+0.13 Sun Nov 13 13:14:49 CET 2005
+ - DynaLoader's bootstrap() is honored on older perls.
+
 0.12 Sun Oct 30 20:18:12 CET 2005
  - Converted Algorithm::MedianSelect entirely over to XS.
 
