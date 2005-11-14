@@ -12,13 +12,11 @@ my $build = Module::Build->new
                  'Exporter' => 0, 
                  'XSLoader' => 0,
                },
+   build_requires => { 'Test::More' => 0 },	       
    recommends => {
                    'Test::Pod' => '1.14',
 		   'Test::Pod::Coverage' => '1.04',
 		 },
-   build_requires => { 
-                       'Test::More' => 0,
-		     },
    xs_files => { 'XS.xs' => 'blib/Algorithm/MedianSelect/XS.xs' },
    include_dirs => [ '.' ],
    license => 'perl',

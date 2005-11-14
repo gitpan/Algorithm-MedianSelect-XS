@@ -5,16 +5,16 @@ use warnings;
 use base qw(Exporter);
 use vars qw($VERSION @ISA @EXPORT_OK);
 
-$VERSION = '0.13';
+$VERSION = '0.14';
 @EXPORT_OK = qw(median);
 
 eval {
-  require XSLoader;
-  XSLoader::load(__PACKAGE__, $VERSION);
+    require XSLoader;
+    XSLoader::load(__PACKAGE__, $VERSION);
 } or do {
-  require DynaLoader;
-  push @ISA, 'DynaLoader';
-  bootstrap Algorithm::MedianSelect::XS $VERSION;
+    require DynaLoader;
+    push @ISA, 'DynaLoader';
+    bootstrap Algorithm::MedianSelect::XS $VERSION;
 };
 
 1;

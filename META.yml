@@ -1,6 +1,6 @@
 ---
 name: Algorithm-MedianSelect-XS
-version: 0.13
+version: 0.14
 author:
   - Steven Schubiger <schubiger@cpan.org>
 abstract: Median finding algorithm
@@ -19,5 +19,5 @@ build_requires:
 provides:
   Algorithm::MedianSelect::XS:
     file: lib/Algorithm/MedianSelect/XS.pm
-    version: 0.13
+    version: 0.14
 generated_by: Module::Build version 0.2703
