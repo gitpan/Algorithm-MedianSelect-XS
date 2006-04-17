@@ -5,17 +5,11 @@ use warnings;
 use base qw(Exporter);
 use vars qw($VERSION @ISA @EXPORT_OK);
 
-$VERSION = '0.14';
+$VERSION = '0.15';
 @EXPORT_OK = qw(median);
 
-eval {
-    require XSLoader;
-    XSLoader::load(__PACKAGE__, $VERSION);
-} or do {
-    require DynaLoader;
-    push @ISA, 'DynaLoader';
-    bootstrap Algorithm::MedianSelect::XS $VERSION;
-};
+require XSLoader;
+XSLoader::load(__PACKAGE__, $VERSION);
 
 1;
 __END__
@@ -51,7 +45,7 @@ L<http://www.cs.sunysb.edu/~algorith/files/median.shtml>
 
 =head1 AUTHOR
 
-Steven Schubiger, schubiger@cpan.org
+Steven Schubiger <schubiger@cpan.org>
 
 =head1 LICENSE
 

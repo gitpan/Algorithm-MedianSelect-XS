@@ -1,16 +1,29 @@
 Revision history for Perl extension Algorithm::MedianSelect::XS.
 
+0.14 Mon Apr 17 16:37:52 CEST 2006
+
+ - Changed Build.PL argument create_makefile_pl from 'passtrough'
+   to 'traditional' for the sake of compatibility.
+   
+ - Removed the dependency upon DynaLoader since XSLoader
+   suffices (listed as dependency).
+
 0.13 Sun Nov 13 13:14:49 CET 2005
+
  - DynaLoader's bootstrap() is honored on older perls.
 
 0.12 Sun Oct 30 20:18:12 CET 2005
+
  - Converted Algorithm::MedianSelect entirely over to XS.
 
 0.08 2005/02/15
+
  - Added missing export section in documentation.
 
 0.07 2004/02/29
+
  - median() takes an array instead of an arrayref.
 
 0.01 2004/01/22
+
  - Initial version.
