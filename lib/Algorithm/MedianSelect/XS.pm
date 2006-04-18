@@ -3,9 +3,9 @@ package Algorithm::MedianSelect::XS;
 use strict;
 use warnings;
 use base qw(Exporter);
-use vars qw($VERSION @ISA @EXPORT_OK);
+use vars qw($VERSION @EXPORT_OK);
 
-$VERSION = '0.15';
+$VERSION = '0.16';
 @EXPORT_OK = qw(median);
 
 require XSLoader;
