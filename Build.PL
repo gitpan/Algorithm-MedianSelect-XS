@@ -11,6 +11,7 @@ my $build = Module::Build->new
    dist_author => 'Steven Schubiger <schubiger@cpan.org>',
    dist_version_from => 'lib/Algorithm/MedianSelect/XS.pm',
    requires => {
+                 'Carp' => 0,
                  'Exporter' => 0, 
                  'XSLoader' => 0,
                },

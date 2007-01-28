@@ -1,5 +1,16 @@
 Revision history for Perl extension Algorithm::MedianSelect::XS.
 
+0.17 Sun Jan 28 22:52:36 CET 2007
+
+ - Extended median() that it will accept a reference to
+   a list; but, pass by reference is only marginally (10%) faster.
+
+ - Made the quicksort algorithm default and bubblesort optional.
+   Tremendous improvement in computation time originated thereof.
+
+ - Rewrote the Perl interface to median(); options to median()
+   may be passed via an anonymous hash reference.
+
 0.16 Mon Apr 17 16:46:48 CEST 2006
 
  - Removed superfluous @ISA in XS.pm.
@@ -8,7 +19,7 @@ Revision history for Perl extension Algorithm::MedianSelect::XS.
 
  - Changed Build.PL argument create_makefile_pl from 'passtrough'
    to 'traditional' for the sake of compatibility.
-   
+
  - Removed the dependency upon DynaLoader since XSLoader
    suffices (listed as dependency).
 

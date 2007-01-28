@@ -10,7 +10,8 @@ WriteMakefile
           'PREREQ_PM' => {
                            'Test::More' => 0,
                            'XSLoader' => 0,
-                           'Exporter' => 0
+                           'Exporter' => 0,
+                           'Carp' => 0
                          }
         )
 ;
