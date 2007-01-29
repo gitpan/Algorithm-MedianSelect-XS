@@ -8,7 +8,7 @@ use Carp qw(carp);
 
 our ($VERSION, @EXPORT_OK);
 
-$VERSION = '0.17';
+$VERSION = '0.18';
 @EXPORT_OK = qw(median);
 
 require XSLoader;
@@ -27,7 +27,7 @@ sub median {
         $algorithm = $opts->{algorithm};
     } else {
         carp "$opts->{algorithm} is no valid algorithm, switching to default...\n"
-	  unless $valid_alg{$opts->{algorithm}};
+          if defined $opts->{algorithm} && !exists $opts->{algorithm};
 
         $algorithm ||= 'quick';
     }

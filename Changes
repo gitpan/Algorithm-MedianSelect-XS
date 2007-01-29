@@ -1,5 +1,10 @@
 Revision history for Perl extension Algorithm::MedianSelect::XS.
 
+0.18 Mon Jan 29 08:18:19 CET 2007
+
+ - Fixed warning which was output when no algorithm argument
+   was supplied.
+
 0.17 Sun Jan 28 22:52:36 CET 2007
 
  - Extended median() that it will accept a reference to
